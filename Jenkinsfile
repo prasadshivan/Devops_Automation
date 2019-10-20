@@ -11,8 +11,8 @@ node {
        if (params.Automation_Type == 'Full_Automation')
   
        {
-       sh 'cd /opt/terransijenk/terraform/dev'
-         sh ("terraform apply -var=insta_count='${instances}' -var=ami_type='${image}' -auto-approve") 
+      
+         sh ("cd /opt/terransijenk/terraform/dev && terraform apply -var="'"insta_count='${instances}'"'" -var="'"ami_type='${image}'"'" -auto-approve") 
        }      
        
       
