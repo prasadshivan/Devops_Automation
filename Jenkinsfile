@@ -12,7 +12,7 @@ node {
   
        {
        sh 'cd /opt/terransijenk/terraform/dev'
-         sh 'terraform apply -var=insta_count='${instances}' -var=ami_type='${image}' -auto-approve' 
+         sh 'terraform apply -var=insta_count=[${instances}] -var=ami_type=[${image}] -auto-approve' 
        }      
        
       
