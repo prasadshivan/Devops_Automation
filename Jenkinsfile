@@ -10,7 +10,7 @@ node {
        def image=params.EC2_Image_ID
        if (params.Automation_Type == 'Full_Automation')
        {
-         sh ("cd /opt/terransijenk/terraform/dev && terraform apply -var='insta_count='${instances}'' -var='ami_type='${image}'' -auto-approve -lock=false") 
+         sh ("cd /opt/terransijenk/terraform/dev && terraform apply -var='insta_count='${instances}'' -var='ami_type='${image}'' -auto-approve") 
          sh "cd /opt/terransijenk/ansible && sleep 30; ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -e '(image_id='${image}'' --private-key Jenkins.pem -i invent.txt, installdocker.yml"      
        }      
        
