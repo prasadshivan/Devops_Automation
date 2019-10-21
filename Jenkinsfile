@@ -12,7 +12,7 @@ node {
   
        {
       
-         sh ("sudo cd /opt/terransijenk/terraform/dev && sudo terraform apply -var='insta_count='${instances}'' -var='ami_type='${image}'' -auto-approve -lock=false") 
+         sh ("sudo cd /opt/terransijenk/terraform/dev/ && sudo terraform apply -var='insta_count='${instances}'' -var='ami_type='${image}'' -auto-approve -lock=false") 
        }      
        
       
